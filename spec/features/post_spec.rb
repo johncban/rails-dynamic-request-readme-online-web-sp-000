@@ -11,6 +11,10 @@ describe 'navigate' do
     visit "/posts/#{@post.id}"
     expect(page.status_code).to eq(200)
   end
-
-
+=begin
+  it 'shows the description on the show page in a p tag' do
+    visit "/posts/#{@post.id}"
+    expect(page).to have_css("p", text: "My post desc")
+  end
+=end
 end
